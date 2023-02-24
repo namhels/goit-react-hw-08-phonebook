@@ -1,10 +1,13 @@
+import { lazy } from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import Box from 'components/Box';
-import ContactList from 'components/ContactList';
-// import Form from 'components/Form';
-import FormFormik from 'components/Formik';
-import { Headline } from 'components/Title';
+import SharedLayout from 'components/SharedLayout';
+
+const Register = lazy(() => import('pages/Register'));
+const Login = lazy(() => import('pages/Login'));
+const Contacts = lazy(() => import('pages/Contacts'));
 
 const App = () => {
   return (
@@ -12,18 +15,14 @@ const App = () => {
       p={5}
       backgroundImage="linear-gradient(45deg, rgb(0, 219, 222), rgb(252, 0, 255))"
     >
-      <Box
-        bg="backgroundPrimary"
-        boxShadow="small"
-        borderRadius={8}
-        p={5}
-        maxWidth="435px"
-        mx="auto"
-      >
-        <Headline HeadlineLogo>Phonebook</Headline>
-        <FormFormik />
-        <ContactList />
-      </Box>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Navigate to="register" />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="contacts" element={<Contacts />} />
+        </Route>
+      </Routes>
       <ToastContainer
         position="top-right"
         autoClose={2000}

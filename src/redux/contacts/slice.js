@@ -4,7 +4,7 @@ import {
   addContact,
   deleteContact,
   // toggleCompleted,
-} from 'redux/operations';
+} from './operations';
 // import { persistReducer } from 'redux-persist';
 // import storage from 'redux-persist/lib/storage';
 

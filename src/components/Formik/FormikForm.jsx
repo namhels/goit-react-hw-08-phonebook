@@ -3,8 +3,8 @@ import { toast } from 'react-toastify';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { BsFillPersonFill, BsFillTelephoneFill } from 'react-icons/bs';
-import { selectContacts } from 'redux/selectors';
-import { addContact } from 'redux/operations';
+import { selectContacts } from 'redux/contacts';
+import { addContact } from 'redux/contacts';
 import {
   Button,
   ContactForm,

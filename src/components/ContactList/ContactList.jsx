@@ -5,13 +5,13 @@ import {
   selectIsLoading,
   selectError,
   selectVisibleContacts,
-} from 'redux/selectors';
+} from 'redux/contacts';
 import { List } from './ContactList.Styled';
 import { Headline } from 'components/Title';
 import ContactItem from 'components/ContactItem';
 import Filter from 'components/Filter';
 import Loader from 'components/Loader';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts';
 
 const ContactList = () => {
   const dispatch = useDispatch();
