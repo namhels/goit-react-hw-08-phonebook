@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[859],{4859:function(e,n,r){r.r(n),r.d(n,{default:function(){return t}});var o=r(184),t=function(){return(0,o.jsx)("div",{children:(0,o.jsxs)("h1",{children:["Contacts manager welcome page"," ",(0,o.jsx)("span",{role:"img","aria-label":"Greeting icon",children:"\ud83d\udc81\u200d\u2640\ufe0f"})]})})}}}]);
+//# sourceMappingURL=859.4fa748fe.chunk.js.map
