@@ -1,12 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { logOut } from 'redux/auth';
 import {
   fetchContacts,
   addContact,
   deleteContact,
   // toggleCompleted,
 } from './operations';
-// import { persistReducer } from 'redux-persist';
-// import storage from 'redux-persist/lib/storage';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -29,7 +28,7 @@ export const contactsSlice = createSlice({
     [fetchContacts.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-      state.items = action.payload.reverse();
+      state.items = action.payload;
     },
     [fetchContacts.rejected]: handleRejected,
     // [addContact.pending]: handlePending,
@@ -48,6 +47,11 @@ export const contactsSlice = createSlice({
       );
     },
     [deleteContact.rejected]: handleRejected,
+    [logOut.fulfilled](state) {
+      state.items = [];
+      state.error = null;
+      state.isLoading = false;
+    },
     // [toggleCompleted.pending]: handlePending,
     // [toggleCompleted.fulfilled](state, action) {
     //   state.isLoading = false;
@@ -61,15 +65,4 @@ export const contactsSlice = createSlice({
   },
 });
 
-// const persistConfig = {
-//   key: 'contacts',
-//   storage,
-//   whitelist: ['items'],
-// };
-
 export const contactsReducer = contactsSlice.reducer;
-
-// export const contactsReducer = persistReducer(
-//   persistConfig,
-//   contactsSlice.reducer
-// );

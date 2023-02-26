@@ -1,2 +1,2 @@
 export { default } from './FormikForm';
-// export * from './Form.Styled';
+export * from './FormikForm.Styled';

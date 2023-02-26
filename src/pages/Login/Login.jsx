@@ -1,7 +1,13 @@
-import React from 'react';
+import LoginForm from 'components/LoginForm';
+import { Headline } from 'components/Title';
 
 const Login = () => {
-  return <div>Login</div>;
+  return (
+    <div>
+      <Headline>Login</Headline>
+      <LoginForm />
+    </div>
+  );
 };
 
 export default Login;
