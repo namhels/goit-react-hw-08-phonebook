@@ -9,6 +9,7 @@ import { RestrictedRoute } from './components/RestrictedRoute';
 import SharedLayout from 'components/SharedLayout';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
+import Loader from 'components/Loader';
 
 const HomePage = lazy(() => import('pages/Home'));
 const RegisterPage = lazy(() => import('pages/Register'));
@@ -26,11 +27,11 @@ const App = () => {
   return (
     <Box
       p={5}
-      height="100vh"
+      min-height="100vh"
       backgroundImage="linear-gradient(45deg, rgb(0, 219, 222), rgb(252, 0, 255))"
     >
       {isRefreshing ? (
-        <b>Refreshing user...</b>
+        <Loader />
       ) : (
         <Routes>
           <Route path="/" element={<SharedLayout />}>

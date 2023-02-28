@@ -21,7 +21,7 @@ const initialValues = {
   password: '',
 };
 
-const LoginForm = () => {
+const LoginForm = ({ children }) => {
   const dispatch = useDispatch();
 
   const handleSubmit = ({ email, password }, { resetForm }) => {
@@ -41,6 +41,7 @@ const LoginForm = () => {
       onSubmit={handleSubmit}
     >
       <ContactForm autoComplete="off">
+        {children}
         <InputWrapper>
           <Input type="email" name="email" placeholder="email" required />
           <BsFillPersonFill />

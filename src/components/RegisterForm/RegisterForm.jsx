@@ -23,7 +23,7 @@ const initialValues = {
   password: '',
 };
 
-const RegisterForm = () => {
+const RegisterForm = ({ children }) => {
   const dispatch = useDispatch();
 
   const handleSubmit = ({ name, email, password }, { resetForm }) => {
@@ -43,6 +43,7 @@ const RegisterForm = () => {
       onSubmit={handleSubmit}
     >
       <ContactForm autoComplete="off">
+        {children}
         <InputWrapper>
           <Input type="text" name="name" placeholder="name" required />
           <BsFillPersonFill />

@@ -3,10 +3,9 @@ import { Headline } from 'components/Title';
 
 const Login = () => {
   return (
-    <div>
+    <LoginForm>
       <Headline>Login</Headline>
-      <LoginForm />
-    </div>
+    </LoginForm>
   );
 };
 

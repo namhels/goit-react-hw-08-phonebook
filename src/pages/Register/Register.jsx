@@ -3,10 +3,9 @@ import { Headline } from 'components/Title';
 
 const Register = () => {
   return (
-    <div>
+    <RegisterForm>
       <Headline>Registration</Headline>
-      <RegisterForm />
-    </div>
+    </RegisterForm>
   );
 };
 
