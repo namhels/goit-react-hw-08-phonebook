@@ -1,13 +1,13 @@
+import { Container, Heading, Image } from '@chakra-ui/react';
+
 const Home = () => {
   return (
-    <div>
-      <h1>
-        Contacts manager welcome page{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
+    <Container centerContent>
+      <Heading as="h1" textAlign="center">
+        Welcome to your Phonebook
+      </Heading>
+      <Image src="./images/Phonebook1.jpg" alt="Phonebook" boxSize="80vh" />
+    </Container>
   );
 };
 

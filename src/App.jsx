@@ -27,7 +27,7 @@ const App = () => {
   return (
     <Box
       p={5}
-      min-height="100vh"
+      minHeight="100vh"
       backgroundImage="linear-gradient(45deg, rgb(0, 219, 222), rgb(252, 0, 255))"
     >
       {isRefreshing ? (
