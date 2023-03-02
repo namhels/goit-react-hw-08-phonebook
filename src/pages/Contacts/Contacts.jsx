@@ -2,7 +2,6 @@ import Box from 'components/Box';
 import ContactList from 'components/ContactList';
 // import Form from 'components/Form';
 import FormFormik from 'components/Formik';
-import { Headline } from 'components/Title';
 
 const Contacts = () => {
   return (
@@ -14,7 +13,6 @@ const Contacts = () => {
       maxWidth="435px"
       mx="auto"
     >
-      <Headline HeadlineLogo>Phonebook</Headline>
       <FormFormik />
       <ContactList />
     </Box>
