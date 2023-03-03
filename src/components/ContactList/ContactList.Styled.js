@@ -4,7 +4,6 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 435px;
   padding-top: ${p => p.theme.space[5]}px;
   padding-bottom: ${p => p.theme.space[5]}px;
   background-color: ${p => p.theme.colors.halloween[4]};

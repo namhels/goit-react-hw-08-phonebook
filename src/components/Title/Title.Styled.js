@@ -9,7 +9,7 @@ const Headline = styled.h1`
   color: ${p => p.theme.colors.halloween[0]};
   transition: all 300ms;
   :hover {
-    letter-spacing: ${p => p.theme.space[2]}px;
+    transform: scale(1.1);
     filter: drop-shadow(4px 8px 3px ${p => p.theme.colors.halloween[1]});
   }
 
@@ -17,8 +17,9 @@ const Headline = styled.h1`
     p.HeadlineLogo &&
     css`
       max-width: 100%;
-      font-size: ${p => p.theme.fontSizes.xl};
-      -webkit-text-stroke: 6px ${p => p.theme.colors.halloween[0]};
+      padding-bottom: 0;
+      font-size: 45px;
+      -webkit-text-stroke: 4px ${p => p.theme.colors.halloween[0]};
       -webkit-text-fill-color: transparent;
     `}
 `;

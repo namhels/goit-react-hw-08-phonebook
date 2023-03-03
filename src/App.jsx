@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <Box
-      p={5}
+      pb={4}
       minHeight="100vh"
       backgroundImage="linear-gradient(45deg, rgb(0, 219, 222), rgb(252, 0, 255))"
     >

@@ -9,7 +9,6 @@ const Home = () => {
       <Image
         src="https://play-lh.googleusercontent.com/h6z0ro9wtsxb20fgLaIDXJrXtWqDyvm_Bnfk-q3JFbg08R2PgNq8ZSAoUX1DYDXLofPD"
         alt="Phonebook"
-        boxSize="80vh"
       />
     </Container>
   );

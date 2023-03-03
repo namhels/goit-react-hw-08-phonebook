@@ -44,7 +44,7 @@ const Button = styled.button`
     color: ${p => p.theme.colors.halloween[3]};
     background-color: ${p => p.theme.colors.halloween[1]};
     border-color: ${p => p.theme.colors.halloween[3]};
-    letter-spacing: ${p => p.theme.space[1]}px;
+    /* transform: scale(1.1); */
   }
 `;
 
