@@ -1,29 +1,46 @@
 import { NavLink } from 'react-router-dom';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
+import { ButtonGroup, Button } from '@chakra-ui/react';
 import { useAuth } from 'hooks';
+
+// const focusBtn = {
+// transition = 'all 0.5s';
+//   ':focus': {
+//     color: 'white',
+//     bg: 'purple.500',
+//     borderColor: 'purple.500',
+//   },
+//   ':active': {
+//     transform: 'scale(1.8)',
+//   },
+// };
 
 const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Breadcrumb separator="">
-      <BreadcrumbItem _hover={{ color: 'white', bg: 'blue.500' }}>
-        <BreadcrumbLink as={NavLink} to="/">
-          Home
-        </BreadcrumbLink>
-      </BreadcrumbItem>
+    <ButtonGroup variant="outline" colorScheme="purple" spacing="6">
+      <Button
+        as={NavLink}
+        to="/"
+        transition="all 0.5s"
+        // sx={{ focusBtn }}
+        _focus={{
+          color: 'white',
+          bg: 'purple.500',
+          borderColor: 'purple.500',
+        }}
+        _active={{
+          transform: 'scale(1.8)',
+        }}
+      >
+        Home
+      </Button>
       {isLoggedIn && (
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink as={NavLink} to="/contacts">
-            Contacts
-          </BreadcrumbLink>
-        </BreadcrumbItem>
+        <Button as={NavLink} to="/contacts">
+          Contacts
+        </Button>
       )}
-
-      {/* <BreadcrumbItem isCurrentPage>
-        <BreadcrumbLink>Contact</BreadcrumbLink>
-      </BreadcrumbItem> */}
-    </Breadcrumb>
+    </ButtonGroup>
 
     // <nav>
     //   <NavLink to="/">Home</NavLink>
