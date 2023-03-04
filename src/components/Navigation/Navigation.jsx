@@ -18,7 +18,7 @@ const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <ButtonGroup variant="outline" colorScheme="purple" spacing="6">
+    <ButtonGroup size="sm" variant="outline" colorScheme="purple" spacing="6">
       <Button
         as={NavLink}
         to="/"
