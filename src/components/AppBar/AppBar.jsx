@@ -43,9 +43,9 @@ const AppBar = () => {
   };
 
   return (
-    <Box as="header" bg={colorMode === 'dark' ? 'orange.600' : 'orange.200'}>
+    <Box as="header" py={4} bg={colorMode === 'dark' ? 'cyan.600' : 'cyan.200'}>
       <Container maxW={['full', 'container.lg']}>
-        <Flex alignItems="center">
+        <Flex align="center">
           <Headline HeadlineLogo>Phonebook</Headline>
           <Spacer />
           <Box display={{ base: 'none', md: 'contents' }}>
