@@ -57,7 +57,7 @@ const LoginForm = ({ children }) => {
           <BsFillTelephoneFill />
         </InputWrapper>
         <FormError name="password" />
-        <Button type="submit">logIn</Button>
+        <Button type="submit">log In</Button>
       </ContactForm>
     </Formik>
   );

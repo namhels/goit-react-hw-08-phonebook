@@ -27,12 +27,7 @@ const RegisterForm = ({ children }) => {
   const dispatch = useDispatch();
 
   const handleSubmit = ({ name, email, password }, { resetForm }) => {
-    // if (contacts.find(el => el.name === name)) {
-    //   toast.error(`${name} is already in contacts`);
-    //   return;
-    // }
     dispatch(register({ name, email, password }));
-    // toast.success(`${name} was added to contacts`);
     resetForm();
   };
 
@@ -64,7 +59,7 @@ const RegisterForm = ({ children }) => {
           <BsFillTelephoneFill />
         </InputWrapper>
         <FormError name="password" />
-        <Button type="submit">register</Button>
+        <Button type="submit">Sign Up</Button>
       </ContactForm>
     </Formik>
   );

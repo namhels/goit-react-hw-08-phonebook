@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
 const Headline = styled.h1`
-  padding-bottom: ${p => p.theme.space[4]}px;
-  max-width: 200px;
   font-family: ${p => p.theme.fonts.heading};
   font-size: ${p => p.theme.fontSizes.l};
   font-weight: ${p => p.theme.fontWeights.bold};

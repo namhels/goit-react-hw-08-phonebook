@@ -29,8 +29,8 @@ const ContactList = () => {
       {isLoading && !error && <Loader />}
       {contacts.length > 0 ? (
         <>
-          <Headline>Contacts</Headline>
           <List>
+            <Headline>Contacts</Headline>
             <Filter />
             {visibleContacts.map(contact => (
               <ContactItem key={contact.id} contact={contact}></ContactItem>

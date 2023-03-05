@@ -12,6 +12,7 @@ import {
   FormError,
   InputWrapper,
 } from './FormikForm.Styled';
+import { Headline } from 'components/Title';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -38,25 +39,28 @@ const FormFormik = () => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={schema}
-      onSubmit={handleSubmit}
-    >
-      <ContactForm autoComplete="off">
-        <InputWrapper>
-          <Input type="text" name="name" placeholder="name" required />
-          <BsFillPersonFill />
-        </InputWrapper>
-        <FormError name="name" />
-        <InputWrapper>
-          <Input type="tel" name="number" placeholder="number" required />
-          <BsFillTelephoneFill />
-        </InputWrapper>
-        <FormError name="number" />
-        <Button type="submit">add contact</Button>
-      </ContactForm>
-    </Formik>
+    <>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={schema}
+        onSubmit={handleSubmit}
+      >
+        <ContactForm autoComplete="off">
+          <Headline>Enter a new contact</Headline>
+          <InputWrapper>
+            <Input type="text" name="name" placeholder="name" required />
+            <BsFillPersonFill />
+          </InputWrapper>
+          <FormError name="name" />
+          <InputWrapper>
+            <Input type="tel" name="number" placeholder="number" required />
+            <BsFillTelephoneFill />
+          </InputWrapper>
+          <FormError name="number" />
+          <Button type="submit">add contact</Button>
+        </ContactForm>
+      </Formik>
+    </>
   );
 };
 

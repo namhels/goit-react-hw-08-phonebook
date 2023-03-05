@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { ButtonGroup, Button } from '@chakra-ui/react';
-import { IoHomeSharp } from 'react-icons/io5';
-import { RiContactsBookFill } from 'react-icons/ri';
+import { MdAppRegistration } from 'react-icons/md';
+import { RiLoginBoxLine } from 'react-icons/ri';
 
 const AuthNav = () => {
   return (
@@ -9,7 +9,7 @@ const AuthNav = () => {
       <Button
         as={NavLink}
         to="/register"
-        leftIcon={<IoHomeSharp />}
+        leftIcon={<MdAppRegistration />}
         transition="all 0.5s"
         _activeLink={{
           color: 'white',
@@ -22,7 +22,7 @@ const AuthNav = () => {
       <Button
         as={NavLink}
         to="/login"
-        leftIcon={<RiContactsBookFill />}
+        leftIcon={<RiLoginBoxLine />}
         transition="all 0.5s"
         _activeLink={{
           color: 'white',

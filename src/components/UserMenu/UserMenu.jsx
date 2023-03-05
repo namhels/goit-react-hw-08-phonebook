@@ -41,7 +41,7 @@ const UserMenu = () => {
         >
           <Avatar
             name={user.name}
-            src="https://bit.ly/broken-link"
+            // src="https://bit.ly/broken-link"
             colorScheme="purple"
             size="sm"
             cursor="pointer"
