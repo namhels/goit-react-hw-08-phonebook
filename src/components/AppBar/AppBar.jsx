@@ -15,7 +15,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { AiOutlineCloseCircle, AiOutlineMenuFold } from 'react-icons/ai';
-import { Headline } from 'components/Title';
+import Logo from 'components/Logo';
 
 const MenuToggle = ({ onClick, isMenuOpen }) => {
   return (
@@ -46,7 +46,7 @@ const AppBar = () => {
     <Box as="header" py={4} bg={colorMode === 'dark' ? 'cyan.600' : 'cyan.200'}>
       <Container maxW={['full', 'container.lg']}>
         <Flex align="center">
-          <Headline HeadlineLogo>Phonebook</Headline>
+          <Logo />
           <Spacer />
           <Box display={{ base: 'none', md: 'contents' }}>
             <Navigation />

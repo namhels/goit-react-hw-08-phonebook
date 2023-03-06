@@ -4,7 +4,7 @@ import { Headline } from 'components/Title';
 
 const Register = () => {
   return (
-    <Box maxW={['full', 'container.sm']} mx="auto" mt={4}>
+    <Box maxW={['full', 'container.sm']} mx="auto" mt={4} px={4}>
       <RegisterForm>
         <Headline>Registration</Headline>
       </RegisterForm>
