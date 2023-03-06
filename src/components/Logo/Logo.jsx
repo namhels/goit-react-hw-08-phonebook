@@ -6,7 +6,7 @@ const Logo = () => {
       size="2xl"
       transition="all 300ms"
       sx={{
-        WebkitTextStroke: '4px #07b7b4',
+        WebkitTextStroke: '4px #f0ece9',
         WebkitTextFillColor: 'transparent',
         ':hover': {
           transform: 'scale(1.1)',

@@ -5,7 +5,6 @@ import AuthNav from 'components/AuthNav';
 import { useAuth } from 'hooks';
 import {
   Box,
-  IconButton,
   Container,
   Flex,
   Spacer,
@@ -14,22 +13,9 @@ import {
   Collapse,
   VStack,
 } from '@chakra-ui/react';
-import { AiOutlineCloseCircle, AiOutlineMenuFold } from 'react-icons/ai';
 import Logo from 'components/Logo';
-
-const MenuToggle = ({ onClick, isMenuOpen }) => {
-  return (
-    <IconButton
-      variant="ghost"
-      colorScheme="cyan"
-      aria-label="Call Sage"
-      fontSize="20px"
-      display={{ base: 'flex', md: 'none' }}
-      onClick={onClick}
-      icon={isMenuOpen ? <AiOutlineCloseCircle /> : <AiOutlineMenuFold />}
-    />
-  );
-};
+import MenuToggle from 'components/MenuToggle';
+import ToggleTheme from 'components/ToggleTheme';
 
 const AppBar = () => {
   const { isLoggedIn } = useAuth();
@@ -54,6 +40,7 @@ const AppBar = () => {
             {isLoggedIn ? <UserMenu /> : <AuthNav />}
           </Box>
           <MenuToggle onClick={toggle} isMenuOpen={isMenuOpen} />
+          <ToggleTheme />
         </Flex>
         <Box display={{ base: 'contents', md: 'none' }}>
           <Collapse in={isOpen} animateOpacity>

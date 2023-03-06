@@ -3,7 +3,7 @@ import { Container, Heading, Image } from '@chakra-ui/react';
 const Home = () => {
   return (
     <Container centerContent>
-      <Heading as="h1" textAlign="center" color="white">
+      <Heading as="h1" mt={5} textAlign="center" color="white">
         Welcome to your Phonebook
       </Heading>
       <Image

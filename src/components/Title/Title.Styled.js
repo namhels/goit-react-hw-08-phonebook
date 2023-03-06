@@ -14,7 +14,6 @@ const Headline = styled.h1`
   ${p =>
     p.HeadlineLogo &&
     css`
-      /* max-width: 100%; */
       padding-bottom: 0;
       font-size: 45px;
       -webkit-text-stroke: 4px ${p => p.theme.colors.halloween[0]};
