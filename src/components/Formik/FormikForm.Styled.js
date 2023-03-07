@@ -89,7 +89,7 @@ const FormError = ({ name }) => {
 };
 
 const Button = styled.button`
-  width: 35%;
+  width: 162px;
   margin-top: ${p => p.theme.space[4]}px;
   margin-left: auto;
   margin-right: auto;

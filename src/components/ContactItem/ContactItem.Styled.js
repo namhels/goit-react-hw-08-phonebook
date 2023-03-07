@@ -29,7 +29,7 @@ const Item = styled.li`
 `;
 
 const Button = styled.button`
-  width: 20%;
+  width: 72px;
   padding: ${p => p.theme.space[2]}px;
   font-family: ${p => p.theme.fonts.heading};
   font-size: ${p => p.theme.fontSizes.s};

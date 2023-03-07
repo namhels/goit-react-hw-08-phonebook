@@ -1,10 +1,13 @@
 import { Heading, useColorMode } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Logo = () => {
   const { colorMode } = useColorMode();
 
   return (
     <Heading
+      as={Link}
+      to="/"
       fontSize="5xl"
       transition="all 300ms"
       sx={
