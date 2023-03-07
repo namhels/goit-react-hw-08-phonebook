@@ -10,6 +10,7 @@ const ToggleTheme = () => {
       colorScheme="cyan"
       aria-label="toggle theme"
       rounded="full"
+      ml={2}
       size="md"
       onClick={toggleColorMode}
       icon={colorMode === 'dark' ? <FaSun /> : <FaMoon />}

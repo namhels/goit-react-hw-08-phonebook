@@ -44,7 +44,7 @@ const AppBar = () => {
         </Flex>
         <Box display={{ base: 'contents', md: 'none' }}>
           <Collapse in={isOpen} animateOpacity>
-            <VStack spacing={4} align="center">
+            <VStack py={2} spacing={4} align="center">
               <Navigation />
               {isLoggedIn ? <UserMenu /> : <AuthNav />}
             </VStack>

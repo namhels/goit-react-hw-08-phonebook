@@ -10,6 +10,7 @@ import SharedLayout from 'components/SharedLayout';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
 import Loader from 'components/Loader';
+import { useColorMode } from '@chakra-ui/react';
 
 const HomePage = lazy(() => import('pages/Home'));
 const RegisterPage = lazy(() => import('pages/Register'));
@@ -19,6 +20,7 @@ const ContactsPage = lazy(() => import('pages/Contacts'));
 const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
+  const { colorMode } = useColorMode();
 
   useEffect(() => {
     dispatch(refreshUser());
@@ -28,7 +30,11 @@ const App = () => {
     <Box
       pb={4}
       minHeight="100vh"
-      backgroundImage="linear-gradient(45deg, rgb(0, 219, 222), rgb(252, 0, 255))"
+      backgroundImage={
+        colorMode === 'dark'
+          ? 'linear-gradient(45deg, rgba(0, 218, 222, 0.499), rgba(251, 0, 255, 0.726))'
+          : 'linear-gradient(45deg, rgb(0, 219, 222), rgb(252, 0, 255))'
+      }
     >
       {isRefreshing ? (
         <Loader />
